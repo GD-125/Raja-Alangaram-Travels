@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CONATCT US</title>
+    <link rel="icon" type="image/png" href="images/logo.jpg">
+    <link rel="stylesheet" href="styles-contact.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo"><span>Raja Alangaram </span>Travels & <span>Call Taxi</span> Services</div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="About.html" target="_blank">About</a></li>
+                <li><a href="Services.html" target="_blank">Services</a></li>
+                <li><a href="Destinations.html" target="_blank">Destinations</a></li>
+                <li><a href="Tour_packages.html" target="_blank">Tour Packages</a></li>
+                <li><a href="Gallery.html" target="_blank">Gallery</a></li>
+                <li><a href="Our_fleet.html" target="_blank">Our Fleet</a></li>
+                <li><a href="Contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="social-icons">
+            <a href="tel:+919952824847" class="icon"><i class="fas fa-phone-alt"></i></a>
+            <a href="mailto:saravanandivya4847@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/saravana2444kumar/profilecard/" target="_blank" class="icon"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/Raja-Alangaram-Travels/100054265190573/" target="_blank"
+                class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/+919952824847" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!--<section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Explore the World with Us</h1>
+            <p>Discover new destinations, book your dream vacation, and start your journey today!</p>
+            <a href="#destinations" class="cta-btn">Explore Now</a>
+        </div>
+    </section>-->
+    <hr class="section-divider">
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h1>Start Your Journey</h1>
+
+                <!-- Phone Section -->
+                <div class="info-item">
+                    <h2><i class="phone-icon">📞</i></h2>
+                    <h1>
+                        <a href="tel:+91 9952824847"> +91 - 9952824847</a>
+                        <a href="tel:+91 9443824847"> +91 - 9443824847</a>
+                    </h1>
+                </div>
+
+                <!-- Email Section -->
+                <div class="info-item">
+                    <h2><i class="email-icon">📧</i> </h2>
+                    <h1><a href="mailto:saravanandivya4847@gmail.com">saravanandivya4847 @gmail.com</a></h1>
+                </div>
+
+                <!-- Address Section -->
+                <div class="info-item">
+                    <h2><i class="address-icon">📍</i></h2>
+                    <h1>Adivaram Road, Adivaram, Palani - 624601</h1>
+                </div>
+            </div>
+
+            <!-- Contact Icons Section -->
+            <div class="contact-icons">
+                <h2>QUICK LINKS </h2>
+                <h3>(Just TAP the icons below)</h3>
+                <div class="contact-row">
+                    <a href="tel:+91 94438 24847">
+                        <img src="images/icons/call.png" alt="Call" class="contact-icon">
+                    </a>
+                    <a href="https://wa.me/+919952824847" target="_blank">
+                        <img src="images/icons/WhatsApp.png" alt="WhatsApp" class="contact-icon">
+                    </a>
+                    <a href="mailto:saravanandivya4847@gmail.com">
+                        <img src="images/icons/mail.png" alt="Email" class="contact-icon">
+                    </a>
+                    <a href="https://www.facebook.com/people/Raja-Alangaram-Travels/100054265190573/" target="_blank">
+                        <img src="images/icons/fb.png" alt="Facebook" class="contact-icon">
+                    </a>
+                    <a href="https://www.instagram.com/saravana2444kumar/profilecard/" target="_blank">
+                        <img src="images/icons/insta.png" alt="Instagram" class="contact-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.667043157601!2d77.51401027503724!3d10.44797368968153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9df4626fb8231%3A0x1c67be8de4cb6b43!2sRaja%20Alangaram%20Travels%20and%20Call%20Taxi%20Services%20in%20Palani!5e0!3m2!1sen!2sin!4v1733214007025!5m2!1sen!2sin"
+            width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </iframe>
+    </div>
+
+
+    <script>
+        function redirectToGmail(event) {
+            event.preventDefault();
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=saravanandivya4847@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${fname} ${lname}\nEmail: ${email}\nMessage: ${message}`)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+    <hr class="section-divider">
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- 1st Column: Logo -->
+            <div class="footer-logo">
+                <img src="images/logo.jpg" alt="Raja Alangaram Travels Logo">
+            </div>
+
+            <!-- 2nd Column: Reference Links -->
+            <div class="footer-links">
+                <h3>Reference Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="About.html" target="_blank">About</a></li>
+                    <li><a href="Services.html" target="_blank">Services</a></li>
+                    <li><a href="Destinations.html" target="_blank">Destinations</a></li>
+                    <li><a href="Tour_packages.html" target="_blank">Tour Packages</a></li>
+                    <li><a href="Gallery.html" target="_blank">Gallery</a></li>
+                    <li><a href="Our_fleet.html" target="_blank">Our Fleet</a></li>
+                    <li><a href="Contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- 3rd Column: Contact Us -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Adivaram Road, Adivaram, Palani - 624601</p>
+                <p><i class="fas fa-phone-alt"></i> +91 99628 24827</p>
+                <p><i class="fab fa-whatsapp"></i> +91 99628 24827</p>
+                <p><i class="fas fa-envelope"></i> info@rajaalangaramtravels.com</p>
+            </div>
+
+            <!-- 4th Column: Follow Us -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/people/Raja-Alangaram-Travels/100054265190573/" target="_blank"
+                        class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="tel:+919443824847" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+                    <a href="mailto:saravanandivya4847@gmail.com" class="social-icon"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/+919952824847" target="_blank" class="icon"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/saravana2444kumar/profilecard/" target="_blank"
+                        class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a> -->
+                </div>
+                <br><br>
+                <H1>DEVELOPED BY</H1>
+                <h2>Virtual Guru R & D Solutions</h2>
+            </div>
+        </div>
+
+        <!-- Copyright Notice -->
+        <p class="footer-copy">&copy; 2024 Raja Alangaram Travels. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
+</body>
+
+</html>

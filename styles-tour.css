@@ -1,0 +1,604 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Style for the horizontal rule (hr) */
+.section-divider {
+    border: 0;
+    height: 0.25rem;
+    background-color: #001d3d; /* Set the color of the hr line */
+    margin: 40px 0; /* Adjust spacing above and below the hr line */
+}
+
+/* General Styles for Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #61dfff; /* Accent color */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #00f5d4; /* Accent color on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons .icon {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    color: #00bbf9; /* Accent color on hover */
+}
+/* Hamburger Icon */
+.hamburger-icon { 
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 20px; /* Position at the top of the page */
+    left: 20px; /* Position on the left */
+    z-index: 10; /* Ensure it stays on top of the navbar */
+    text-shadow: 0 0 10px #fff, 0 0 20px #c800ff, 0 0 30px #00a2ff; /* Initial glow effect */
+    animation: glow 1.5s infinite alternate; /* Animation for glowing effect */
+}
+
+/* Keyframes for the glowing effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #c800ff, 0 0 30px #00a2ff;
+    }
+    50% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #c800ff, 0 0 40px #00a2ff;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #c800ff, 0 0 30px #00a2ff;
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: relative; /* Ensure the navbar is positioned relatively */
+    /* background-color: #e00404; Default background color for the navbar */
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row; /* Default layout for desktop */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center the navbar items horizontally */
+}
+
+.navbar ul li {
+    margin: 10px 20px;
+}
+
+/* Glowing Text Effect for Navbar Links */
+.navbar ul li a {
+    color: #fff; /* Text color */
+    font-size: 1.2em; /* Font size */
+    text-decoration: none; /* Remove underline from links */
+    text-shadow: 0 0 5px #a106de, 0 0 10px #6200ff, 0 0 15px #b700ff; /* Glowing effect */
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Add a stronger glow effect on hover */
+.navbar ul li a:hover {
+    text-shadow: 0 0 10px #0ce7e3, 0 0 20px #00d9ff, 0 0 30px #00ffd9; /* Glow intensifies on hover */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Navbar list items should be hidden by default on mobile */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #c01919;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        padding: 20px 0;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    /* Show the hamburger icon on mobile */
+    .hamburger-icon {
+        display: block;
+    }
+}
+
+/* When the menu is active, show the navbar items */
+.navbar.active ul {
+    display: flex; /* Show the navbar items when the menu is active */
+}
+
+/* Toggle hamburger icon appearance on active state */
+.navbar.active .hamburger-icon i {
+    transform: rotate(90deg); /* Rotate icon when active */
+}
+
+/* Mobile Navigation (Hidden by default) */
+.navbar ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    /* Hide the navbar items on mobile */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* Show the hamburger icon */
+    .hamburger-icon {
+        display: block;
+    }
+}
+
+/* When the menu is active, show the navbar items */
+.navbar.active ul {
+    display: flex;
+}
+
+/* Toggle hamburger icon appearance on active state */
+.navbar.active .hamburger-icon i {
+    transform: rotate(90deg); /* Rotate icon when active */
+}
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: url('images/tour.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.hero h1{
+    font-weight: bold;
+    font-size: 12rem;
+    color: #6186ff;
+}
+
+/* General styles for the "Tour Packages" section */
+.tour-packages {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.tour-packages h1 {
+    font-size: 36px;
+    color: #5f0f40;
+    margin-bottom: 20px;
+}
+
+.tour-packages p {
+    font-size: 1.2rem;
+    color: #3a0ca3;
+    margin-bottom: 40px;
+}
+
+/* Flexbox container for the package cards */
+.packages-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Creates two columns */
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Individual package card styling */
+.package-card {
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    perspective: 1000px; /* Enables 3D effect */
+}
+
+/* Flip card container */
+.flip-card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Flip card inner: holds the front and back sides */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Front side of the card (Image and Title) */
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #007bff; */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.flip-card-front h3{
+    color: #001d3d;
+    text-align: center;
+}
+
+/* Back side of the card (Content) */
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    transform: rotateY(180deg); /* Flip the back face */
+}
+
+.flip-card-back p{
+    color: #eb620c;
+}
+
+.flip-card-back ul li{
+    font-size: 1.2rem;
+}
+
+/* Image styling for the front side */
+.flip-card-front img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Styling for the Call Now button (if needed) */
+.book-now {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.book-now i {
+    margin-right: 8px;
+}
+
+/* Hover effect for Call Now button */
+.book-now:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Media Query for smaller screens */
+@media (max-width: 768px) {
+    .packages-container {
+        grid-template-columns: 1fr;  /* Stacks the cards on smaller screens */
+    }
+
+    .package-card {
+        height: 600px;
+    }
+
+    .flip-card-front {
+        font-size: 21px;
+    }
+
+    .flip-card-back img {
+        height: 150px; /* Reduce image height on smaller screens */
+    }
+}
+
+
+/* Style for the horizontal rule (hr) */
+.section-divider {
+    border: 0;
+    height: 0.25rem;
+    background-color: #1273dc; /* Set the color of the hr line */
+    margin: 40px 0; /* Adjust spacing above and below the hr line */
+}
+
+/* Footer */
+.footer {
+    background-color: #003459;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox layout for footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* 1st Column: Logo */
+.footer-logo img {
+    max-height: 300px; /* Adjust logo size */
+    margin-bottom: 20px;
+    margin-right: 120px;
+
+}
+
+/* 2nd Column: Reference Links */
+.footer-links {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-links h3 {
+    font-size: 25px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f72585;
+}
+
+/* 3rd Column: Contact Us */
+.footer-contact {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-contact h3 {
+    font-size: 25px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 21px;
+    margin: 5px 0;
+    color: #ff758f;
+}
+
+.footer-contact i {
+    margin-right: 12px;
+}
+
+/* 4th Column: Follow Us */
+.footer-social {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-social h3 {
+    font-size: 25px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 21px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff4d6d;
+}
+
+.footer-social H1 {
+    font-size: 2.51rem;  
+    color: #f7aef8;
+    margin-bottom: 10px;
+}
+
+.footer-social h2 {
+    font-size: 34px;  
+    color: #72ddf7;
+    margin-bottom: 10px;
+}
+/* Copyright text */
+.footer-copy {
+    text-align: center;
+    font-size: 21px;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    color: #e500a4;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        max-height: 50px;
+    }
+
+    .footer-links, .footer-contact, .footer-social {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .destination-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        margin-top: 20px;
+    }
+}
+
+

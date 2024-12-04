@@ -1,0 +1,1269 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Style for the horizontal rule (hr) */
+.section-divider {
+    border: 0;
+    height: 0.25rem;
+    background-color: #001d3d; /* Set the color of the hr line */
+    margin: 40px 0; /* Adjust spacing above and below the hr line */
+}
+
+/* General Styles for Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #61dfff; /* Accent color */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #00f5d4; /* Accent color on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons .icon {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    color: #00bbf9; /* Accent color on hover */
+}
+/* Hamburger Icon */
+.hamburger-icon { 
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 20px; /* Position at the top of the page */
+    left: 20px; /* Position on the left */
+    z-index: 10; /* Ensure it stays on top of the navbar */
+    text-shadow: 0 0 10px #fff, 0 0 20px #c800ff, 0 0 30px #00a2ff; /* Initial glow effect */
+    animation: glow 1.5s infinite alternate; /* Animation for glowing effect */
+}
+
+/* Keyframes for the glowing effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #c800ff, 0 0 30px #00a2ff;
+    }
+    50% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #c800ff, 0 0 40px #00a2ff;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #c800ff, 0 0 30px #00a2ff;
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: relative; /* Ensure the navbar is positioned relatively */
+    /* background-color: #e00404; Default background color for the navbar */
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row; /* Default layout for desktop */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center the navbar items horizontally */
+}
+
+.navbar ul li {
+    margin: 10px 20px;
+}
+
+/* Glowing Text Effect for Navbar Links */
+.navbar ul li a {
+    color: #fff; /* Text color */
+    font-size: 1.2em; /* Font size */
+    text-decoration: none; /* Remove underline from links */
+    text-shadow: 0 0 5px #a106de, 0 0 10px #6200ff, 0 0 15px #b700ff; /* Glowing effect */
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Add a stronger glow effect on hover */
+.navbar ul li a:hover {
+    text-shadow: 0 0 10px #0ce7e3, 0 0 20px #00d9ff, 0 0 30px #00ffd9; /* Glow intensifies on hover */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Navbar list items should be hidden by default on mobile */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #c01919;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        padding: 20px 0;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    /* Show the hamburger icon on mobile */
+    .hamburger-icon {
+        display: block;
+    }
+}
+
+/* When the menu is active, show the navbar items */
+.navbar.active ul {
+    display: flex; /* Show the navbar items when the menu is active */
+}
+
+/* Toggle hamburger icon appearance on active state */
+.navbar.active .hamburger-icon i {
+    transform: rotate(90deg); /* Rotate icon when active */
+}
+
+/* Mobile Navigation (Hidden by default) */
+.navbar ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    /* Hide the navbar items on mobile */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* Show the hamburger icon */
+    .hamburger-icon {
+        display: block;
+    }
+}
+
+/* When the menu is active, show the navbar items */
+.navbar.active ul {
+    display: flex;
+}
+
+/* Toggle hamburger icon appearance on active state */
+.navbar.active .hamburger-icon i {
+    transform: rotate(90deg); /* Rotate icon when active */
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/4.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #fff
+}
+
+.cta-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-btn:hover {
+    background-color: #c0392b;
+}
+
+.btn {
+    background-color: #f72585; 
+    color: #3a0ca3;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #e3f2fd;
+}
+.destinations {
+    padding: 50px 0;
+    text-align: center; /* This centers the content horizontally */
+}
+
+.destination-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 20px; /* space between cards */
+    margin: 6px 6px; /* 6px left and right margin */
+    margin-top: 30px;
+    justify-items: center; /* Ensures the cards are centered horizontally */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(139, 225, 2, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 15px 10px;
+    color: #f00fbf;
+}
+
+.card p {
+    font-size: 1.25rem;
+    color: #0c79df;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1200px) {
+    .destination-cards {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+    }
+}
+
+/* Small screens (large phones) */
+@media (max-width: 900px) {
+    .destination-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .destination-cards {
+        grid-template-columns: 1fr; /* 1 card per row on mobile screens */
+    }
+}
+/* About Section */
+.about {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center; /* Center text for the title */
+  position: relative;
+  overflow: hidden; /* Prevent overflow during animation */
+}
+
+/* Title Styling */
+.about-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards 0.3s; /* Fade-in and slide-up effect */
+}
+
+/* Container for text and image */
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  align-items: center; /* Vertically align content */
+  justify-content: space-between; /* Create space between content and image */
+  gap: 40px; /* Space between text and image */
+  max-width: 1200px; /* Optional: Sets a max width for content */
+  margin: 0 auto; /* Center the content horizontally */
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1.5s ease-out forwards 0.6s; /* Entire section fades and slides up with delay */
+}
+
+/* Left side content (text) */
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+  text-align: left; /* Align text to the left */
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards 0.5s; /* Animation with slight delay */
+}
+
+.about-text p {
+  font-size: 1.04rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+.about-text:hover p {
+    color: #510fec; /* Change color on hover */
+  }
+/* Right side image */
+.about-image {
+  flex: 1;
+  max-width: 50%; /* Ensures image does not get too large */
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-out forwards 0.7s; /* Animation with slight delay */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow around the image */
+}
+
+/* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
+/* Responsive Design: Stack the content on small screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack the text and image vertically */
+    gap: 20px; /* Adjust the gap between text and image */
+  }
+
+  .about-text,
+  .about-image {
+    max-width: 100%; /* Allow the text and image to take full width */
+  }
+
+  .about-title {
+    font-size: 30px; /* Adjust title size for small screens */
+  }
+}
+
+/* General styles for the gallery section */
+#gallery {
+    text-align: center;
+    padding: 50px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* Gallery container - Flexbox layout for responsiveness */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Individual gallery items */
+.gallery-item {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover animation for gallery items */
+.gallery-item:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 250px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* Fade-in animation for images */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to gallery items */
+.gallery-item {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Stagger the animations */
+.gallery-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.gallery-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.gallery-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.gallery-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.gallery-item:nth-child(5) {
+    animation-delay: 1s;
+}
+.gallery-item:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+/* General styles for the "Our Fleet" section */
+#our_fleet {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Fleet container - Flexbox layout for 4 items per row */
+.fleet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Individual fleet items */
+.fleet-item {
+    width: 23%; /* 4 items per row */
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+    transform: scale(0.9);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Make images fill the fleet item container */
+.fleet-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover animation for fleet items */
+.fleet-item:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.fleet-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 1024px) {
+    .fleet-item {
+        width: 45%; /* 2 items per row for tablet-size screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .fleet-item {
+        width: 100%; /* 1 item per row for mobile screens */
+        height: 200px;
+    }
+}
+
+/* Animation for the fleet items - Bounce In effect */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to fleet items */
+.fleet-item {
+    animation: bounceIn 1s ease-out;
+}
+
+/* Stagger animation delay for each item */
+.fleet-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.fleet-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.fleet-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.fleet-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* General styles for the "Tour Packages" section */
+.tour-packages {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.tour-packages h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tour-packages p {
+    font-size: 21px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Flexbox container for the package cards */
+.packages-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Creates two columns */
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Individual package card styling */
+.package-card {
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    perspective: 1000px; /* Enables 3D effect */
+}
+
+/* Flip card container */
+.flip-card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Flip card inner: holds the front and back sides */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Front side of the card (Image and Title) */
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #007bff; */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.flip-card-front h3{
+    color: #001d3d;
+    text-align: center;
+}
+
+/* Back side of the card (Content) */
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    transform: rotateY(180deg); /* Flip the back face */
+}
+
+.flip-card-back p{
+    color: #eb620c;
+}
+
+.flip-card-back ul li{
+    font-size: 1.2rem;
+}
+
+/* Image styling for the front side */
+.flip-card-front img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Styling for the Call Now button (if needed) */
+.book-now {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.book-now i {
+    margin-right: 8px;
+}
+
+/* Hover effect for Call Now button */
+.book-now:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Media Query for smaller screens */
+@media (max-width: 768px) {
+    .packages-container {
+        grid-template-columns: 1fr;  /* Stacks the cards on smaller screens */
+    }
+
+    .package-card {
+        height: 600px;
+    }
+
+    .flip-card-front {
+        font-size: 21px;
+    }
+
+    .flip-card-back img {
+        height: 150px; /* Reduce image height on smaller screens */
+    }
+}
+
+/* Base Styles */
+#why-choose-us {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#why-choose-us h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive Grid */
+    gap: 30px;
+}
+
+.feature {
+    background-color: #ffffff; /* White background for each card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Hover effect for a bit of interactivity */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00afb9;
+}
+
+/* Responsive Styling for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    #why-choose-us h2 {
+        font-size: 28px;
+    }
+
+    .features {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .feature img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .feature h3 {
+        font-size: 20px;
+    }
+}
+
+/* Responsive Styling for Mobile Phones */
+@media (max-width: 480px) {
+    #why-choose-us h2 {
+        font-size: 24px;
+    }
+
+    .features {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 15px;
+    }
+
+    .feature img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .feature h3 {
+        font-size: 18px;
+    }
+}
+
+/* General styles for the "Our Services" section */
+#services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Container for service cards */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 6 cards per row */
+    gap: 21px; /* Space between cards */
+    justify-items: center;
+    margin-top: 30px; /* Add some space on top */
+}
+
+/* Individual service card */
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    height: 100%; /* Ensure the card takes full height */
+}
+
+/* Icon styling */
+.service i {
+    font-size: 3em;
+    color: #ff6f61; /* Icon color */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Paragraph text styling */
+.service p {
+    font-size: 1.2em;
+    color: #555; /* Text color */
+    margin: 0;
+    flex-grow: 1; /* Allow text to fill the space */
+}
+
+/* Hover effect for the service cards */
+.service:hover {
+    transform: translateY(-10px); /* Slightly lift the card */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    background-color: #ff6f61; /* New background color on hover */
+}
+
+.service:hover i {
+    color: #fff; /* Change icon color when hovering */
+}
+
+.service:hover p {
+    color: #fff; /* Change text color when hovering */
+}
+
+/* Make the grid responsive */
+@media (max-width: 1200px) {
+    .service-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .service-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .service-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
+    }
+}
+
+@media (max-width: 400px) {
+    .service-container {
+        grid-template-columns: 1fr; /* 1 card per row on very small screens */
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    #services {
+        padding: 40px 20px;
+    }
+    
+    .service-container {
+        grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-container {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+}
+
+/* Contact Section */
+.contact {
+    max-width: 800px;
+    max-height: 800px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contact h1{
+    font-size: 2.8rem;
+    color: #012a4a;
+}
+.contact h2{
+    font-size: 1.2rem;
+    color: #ff595e;
+}
+.contact-row {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+}
+
+.icon-link {
+    display: inline-block; /* Ensures the icon takes up space */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.icon-link:hover {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.contact-icon {
+    width: 43px; /* Set a fixed width for the icons */
+    height: 43px; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    color:#00d804;
+    font-weight: 100;
+}
+.whatsapp-icon {
+    width: 43px; /* Set a fixed width for the icons */
+    height: 43px; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    color:#00b4d8;
+    font-weight: 200;
+}
+
+.email-icon {
+    width: 43px; /* Set a fixed width for the icons */
+    height: 43px; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    color:#00b4d8;
+    font-weight: 200;
+}
+
+.fb-icon {
+    width: 43px; /* Set a fixed width for the icons */
+    height: 43px; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    color:#00b4d8;
+    font-weight: 200;
+}
+
+.insta-icon {
+    width: 43px; /* Set a fixed width for the icons */
+    height: 43px; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    color:#00b4d8;
+    font-weight: 200;
+}
+/* Footer */
+.footer {
+    background-color: #003459;
+    color: white;
+    padding: 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox layout for footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* 1st Column: Logo */
+.footer-logo img {
+    max-height: 300px; /* Adjust logo size */
+    margin-bottom: 20px;
+}
+
+/* 2nd Column: Reference Links */
+.footer-links {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-links h3 {
+    font-size: 25px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f72585;
+}
+
+/* 3rd Column: Contact Us */
+.footer-contact {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-contact h3 {
+    font-size: 25px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 21px;
+    margin: 5px 0;
+    color: #ff758f;
+}
+
+.footer-contact i {
+    margin-right: 12px;
+}
+
+/* 4th Column: Follow Us */
+.footer-social {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-social h3 {
+    font-size: 25px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 21px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff4d6d;
+}
+.footer-social H1 {
+    font-size: 2.51rem;  
+    color: #f7aef8;
+    margin-bottom: 10px;
+}
+
+.footer-social h2 {
+    font-size: 34px;  
+    color: #72ddf7;
+    margin-bottom: 10px;
+}
+/* Copyright text */
+.footer-copy {
+    text-align: center;
+    font-size: 21px;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    color: #e500a4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        max-height: 50px;
+    }
+
+    .footer-links, .footer-contact, .footer-social {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .destination-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        margin-top: 20px;
+    }
+}
